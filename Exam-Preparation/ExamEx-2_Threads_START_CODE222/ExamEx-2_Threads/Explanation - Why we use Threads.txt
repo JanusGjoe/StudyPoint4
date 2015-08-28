@@ -1,0 +1,16 @@
+Explain about Thread Programming including:
+
+- When and why we will use Threads in our programs?
+We use threads to make our programs capable of doing several tasks at the same time.
+This is done in order to save time or to make a GUI accessable for the user, while the program is doing other calculations in the background.
+
+- Explain about the Race Condition Problem and ways to solve it in Java
+A race condition occurs when two or more threads can access shared data and they try to change it at the same time.
+To solve this problem, we can put a lock around the shared data to ensure that only one thread can access the data at a time.
+
+- Explain how Threads can help us in making responsive User Interfaces
+When a user asks the the program to do a task (in example by clicking a button), it will block the GUI untill the task is finish.
+If the program instead, runs the task in a seperate thread, the GUI is still responsive to the user, while the task is finished by the program.
+
+- Explain how we can write reusable non-blocking Java Controls using Threads and the observer Pattern
+Everytime a task is started by the user, a thread is started with the ordered task. The Java Controls add itself as an observer to the started thread. When the task is done by the thread, it notifies its observers and the task is now available to the Java Controls.
